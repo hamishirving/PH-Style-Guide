@@ -1,0 +1,26 @@
+.navbar {
+	border-radius: 0;
+	background-color: #fff;
+	margin: 0;
+	height: 70px;
+	padding: 10px 0;
+}
+
+.nav li {
+	margin-left: 10px;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #333;
+	font-family: 'texgyreadventorbold', 'arial', sans-serif;
+	font-size: 0.875em;
+	padding-top: 10px;
+}
+
+.navbar-brand {
+	padding: 5px 15px;
+
+	img {
+		height: 40px;
+	}
+}

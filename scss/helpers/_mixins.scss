@@ -1,0 +1,4 @@
+// Button shine
+@mixin fade-transition($element) {
+	transition: $element 0.15s ease;
+}

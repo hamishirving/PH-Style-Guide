@@ -1,0 +1,87 @@
+.btn {
+	padding: 11px 30px;
+	font-size: 0.875em;
+	font-weight: 500;
+	// width: 100%;
+	transition: background-color 400ms ease;
+	border: none;
+	border-radius: 3px;
+	margin-bottom: 20px;
+	background-color: $color-dark-grey;
+}
+
+.btn-primary {
+	color: $color-white;
+	background-color: $brand-primary-color;
+	border-bottom: 2px solid darken($brand-primary-color, 7%);
+
+	&:hover {
+		background-color: darken($brand-primary-color, 3%);
+		border-bottom: 2px solid darken($brand-primary-color, 7%);
+	}
+}
+
+.btn-secondary {
+	color: $color-black;
+	background-color: $brand-secondary-color;
+	border-bottom: 2px solid darken($brand-secondary-color, 15%);
+
+	&:hover {
+		background-color: darken($brand-secondary-color, 10%);
+		border-bottom: 2px solid darken($brand-secondary-color, 15%);
+	}
+}
+
+.btn-blue {
+	color: $color-white;
+	background-color: $brand-highlight-color;
+	border-bottom: 2px solid darken($brand-highlight-color, 7%);
+
+	&:hover {
+		background-color: darken($brand-highlight-color, 3%);
+		border-bottom: 2px solid darken($brand-highlight-color, 7%);
+	}
+}
+
+.btn-free {
+	position: relative;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 10px;
+		right: -3px;
+		height: 27px;
+		width: 55px;
+		background: url(../img/free.png);
+  		background-image: url(../img/free.svg), none;
+	}
+}
+
+.btn-animate {
+	@include fade-transition(background);
+	position: relative;
+
+	&:after {
+		content: "";
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: 0;
+		background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.03) 1%,rgba(255,255,255,0.6) 30%,rgba(255,255,255,0.85) 50%,rgba(255,255,255,0.85) 70%,rgba(255,255,255,0.85) 71%,rgba(255,255,255,0) 100%);
+		width: 15%;
+		height: 100%;
+		transform: skew(-15deg,0deg);
+		animation: move 2s;
+		animation-iteration-count: infinite;
+		animation-delay: 1s;
+	}
+}
+
+@keyframes move {
+	0%  { left: 0; opacity: 0; }
+	5% {opacity: 0.0}
+	48% {opacity: 0.2}
+	80% {opacity: 0.0}
+	100% { left: 82%}
+}
